@@ -15,7 +15,7 @@ const concepts = [
     title: "Service & Sales – next level!",
     desc: "Wie sieht exzellenter Service und Sales im CSS im Jahr 2030 aus? Was ist neu, was fühlt sich leichter an, was läuft schneller oder smarter? Ist Service persönlicher, digitaler, vorausschauender – oder alles zusammen? \n\nErzeuge ein Bild Deiner Wunschvorstellung von Service & Sales in 5 Jahren im CSS.",
     tags: ["Service", "Sales", "Next Level"],
-    image: "./Images/Sales_and_Service_2030.png",
+    image: "./images/sales_and_service_2030.png",
     templateHint: "Zukunftsfähiger Service & Sales im CSS: nahtlos, schnell, smart und zugleich menschlich."
   },
   {
@@ -23,7 +23,7 @@ const concepts = [
     title: "Das perfekte Kundenerlebnis",
     desc: "Versetze Dich in unsere Kundinnen und Kunden: Wie erleben sie die Kommunikation (Interaktion) mit uns im Jahr 2030? \n Welche Touchpoints gibt es, welche Emotionen, welche Momente bleiben in Erinnerung? \n\nErzeuge ein Bild davon, wie der Kunde die Interaktion mit dem CSS in 5 Jahren erlebt.",
     tags: ["Kundenerlebnis", "Touchpoints", "Emotionen"],
-    image: "./Images/Kundeninteraktion_in_5_Jahren.png",
+    image: "./images/kundeninteraktion_in_5_jahren.png",
     templateHint: "Perfektes Kundenerlebnis: erinnerungswürdig, mühelos, über viele Touchpoints hinweg und emotional positiv."
   },
   {
@@ -31,7 +31,7 @@ const concepts = [
     title: "Unsere Superpower",
     desc: "Welche Stärke zeichnet Dein Team heute aus – und macht Euch bereit für morgen? Was befähigt Euch, Veränderungen zu meistern und Zukunft aktiv zu gestalten? \n\nErzeuge ein Bild der **Superpower** Deines Teams, die Euch fit für die Zukunft macht.",
     tags: ["Team", "Superpower", "Zukunft"],
-    image: "./Images/Fit_fuer_die_Zukunft.png",
+    image: "./images/fit_fuer_die_zukunft.png",
     templateHint: "Zeige die Kernstärke Deines Teams, die Euch zukunftssicher und widerstandsfähig macht."
   }
 ];
