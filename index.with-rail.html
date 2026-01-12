@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS 2030 CSS ATELIER</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styleRail.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <div class="brand">
+        <div>
+          <div class="titleRow">
+            <div class="title">Im CSS Atelier kannst Du mit KI aus Deinen Gedanken ein Bild unserer Zukunft entstehen lassen. <br>Mach mit und werde Teil der CSS Zukunftsgalerie.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="topbarRight">
+        <span id="statusPill" class="pill">Bereit</span>
+        <button id="resetBtn" class="btn btn--ghost" type="button" aria-label="Reset">↺</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <!-- MAIN -->
+      <main class="main">
+        <div class="card">
+          <div class="cardHead">
+            <div id="steps" class="steps"></div>
+            <div class="stepsArrows">
+              <button id="stepsBackBtn" class="btn btn--ghost btn--tiny" type="button" aria-label="Zurück">←</button>
+              <button id="stepsNextBtn" class="btn btn--ghost btn--tiny" type="button" aria-label="Weiter">→</button>
+            </div>
+          </div>
+
+          <section class="screens">
+
+            <!-- Screen 1 -->
+            <div class="screen active" data-screen="1">
+              <h2>1) Wähle Dein Thema</h2>
+              <p class="muted">
+                Unsere Zukunft in Bildern - Deine Vision zaehlt! Stell Dir vor, Du blickst fuenf Jahre in die Zukunft. Mithilfe von KI kannst Du Deine Gedanken, Wuensche und Ideen sichtbar machen. Es gibt kein Richtig oder Falsch - nur Deine Perspektive. Lass Deiner Fantasie freien Lauf und bring Deine Zukunftsbilder zum Leben!
+              </p>
+              <div id="conceptGrid" class="grid grid--3"></div>
+            </div>
+<!-- Screen 2 -->
+            <div class="screen" data-screen="2">
+              <h2>2) Deine Vision</h2>
+
+              <div class="screen2Layout">
+                <div class="screen2Left">
+                  <div id="conceptPreview" class="conceptPreviewCard hidden" aria-live="polite"></div>
+                </div>
+
+                <div class="screen2Right">
+                  <div class="form form--prompt">
+                    <div class="field promptField">
+                      <label id="labelEntities" for="entities">Protagonisten</label>
+                      <textarea id="entities" placeholder="z.B. Maus, Astronautin, Team, digitale Assistenten."></textarea>
+                    </div>
+
+                    <div class="field promptField">
+                      <label id="labelAction" for="action">Aktion & Dynamik</label>
+                      <textarea id="action" placeholder="z.B. berät, entscheidet, feiert einen Erfolg."></textarea>
+                    </div>
+
+                    <div class="field promptField">
+                      <label id="labelEnvironment" for="environment">Ort & Atmosphäre</label>
+                      <textarea id="environment" placeholder="z.B. CSS Hub 2030, Service-Lounge, virtuelle Umgebung."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 3 -->
+            <div class="screen" data-screen="3">
+              <h2>3) Style wählen</h2>
+              <p class="muted">Wähle einen Look. Optional: Dienst/Model einstellen.</p>
+
+              <div id="styleGrid" class="grid grid--3"></div>
+            </div>
+
+            <!-- Screen 4 -->
+            <div class="screen" data-screen="4">
+              <h2>4) Generieren</h2>
+              <p class="muted">Prompt wird gebaut und an den ausgewählten Dienst gesendet.</p>
+
+              <div class="kv">
+                <div class="k">Prompt</div>
+                <div class="v">
+                  <pre id="promptPreview" class="pre">—</pre>
+                </div>
+              </div>
+
+              <div class="spacer-12"></div>
+
+              <div class="progressWrap">
+                <div class="progressTrack">
+                  <div id="genBar" class="progressBar" style="width:0%"></div>
+                </div>
+                <div id="genText" class="muted">Noch nicht gestartet.</div>
+              </div>
+
+              <div class="spacer-12"></div>
+
+              <div class="kv">
+                <div class="k">Debug</div>
+                <div class="v">
+                  <div class="muted">Letzte Request-URL / Job-ID:</div>
+                  <div id="pollinationsUrlPreview" class="mono urlPreview">—</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 5 -->
+            <div class="screen" data-screen="5">
+              <h2>5) Ergebnis</h2>
+              <p class="muted">Du kannst das Bild in der Galerie speichern oder direkt einen neuen Run starten.</p>
+
+              <div class="resultCard">
+                <div id="resultWrap" class="resultWrap">
+                  <div class="muted">Noch kein Bild vorhanden.</div>
+                </div>
+
+                <div class="resultActions">
+                  <button id="saveToGalleryBtn" class="btn btn--primary" type="button" disabled>In Galerie speichern</button>
+                  <button id="newRunBtn" class="btn" type="button">Neuer Run</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 6 (Gallery) -->
+            <div class="screen" data-screen="6">
+              <div class="galleryHeader">
+                <div>
+                  <h2>Galerie</h2>
+                  <p class="muted">Klicke ein Thumbnail an, um es groß zu sehen. Optional kannst du es als Ergebnis öffnen oder löschen.</p>
+                </div>
+                <div class="galleryHeaderActions">
+                  <button id="clearGalleryBtn" class="btn btn--ghost" type="button">Galerie leeren</button>
+                </div>
+              </div>
+
+              <div class="galleryLayout">
+                <div class="galleryPreviewCard">
+                  <div id="galleryPreviewWrap" class="galleryPreviewWrap">
+                    <div class="muted">Wähle links ein Bild aus.</div>
+                  </div>
+
+                  <div class="galleryPreviewActions">
+                    <button id="openFromGalleryBtn" class="btn btn--primary" type="button" disabled>Als Ergebnis öffnen</button>
+                    <button id="deleteFromGalleryBtn" class="btn" type="button" disabled>Dieses löschen</button>
+                  </div>
+
+                  <div class="spacer-10"></div>
+
+                  <div class="kv">
+                    <div class="k">Prompt</div>
+                    <div class="v">
+                      <pre id="galleryPromptPreview" class="pre pre--small">—</pre>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="galleryGridCard">
+                  <div class="galleryGridHead">
+                    <div class="cardTitle">Bilder</div>
+                    <div class="muted small">Tip: Doppelklick öffnet direkt als Ergebnis</div>
+                  </div>
+                  <div id="galleryScreenGrid" class="galleryScreenGrid"></div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <div class="nav" id="bottomNav">
+            <button id="backBtn" class="btn btn--ghost" type="button">← Zurück</button>
+            <button id="nextBtn" class="btn btn--primary" type="button">Weiter →</button>
+          </div>
+        </div>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="side">
+        <div class="card">
+          <div class="cardHead">
+            <div class="cardTitle">Galerie</div>
+            <button id="openGalleryFromSideBtn" class="btn btn--ghost btn--tiny" type="button">Öffnen</button>
+          </div>
+          <div id="galleryGrid" class="galleryGrid"></div>
+        </div>
+      </aside>
+    </div>
+
+  </div>
+
+  <script src="./styleRail.js"></script>
+  <script src="./app.patched.js"></script>
+</body>
+</html>

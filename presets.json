@@ -1,0 +1,1326 @@
+{
+  "root": {
+    "id": "root",
+    "title": "Stile",
+    "description": "Wähle eine Style-Familie und verfeinere sie schrittweise.",
+    "tags": [
+      "MVP",
+      "hierarchisch"
+    ],
+    "children": [
+      {
+        "id": "photo",
+        "title": "Fotografie",
+        "description": "Realistische Fotoästhetik, Kamera- und Lichtlogik.",
+        "promptParts": [
+          "photorealistic",
+          "high detail",
+          "natural skin texture"
+        ],
+        "tags": [
+          "realistisch",
+          "kamera"
+        ],
+        "children": [
+          {
+            "id": "photo_portrait",
+            "title": "Portrait",
+            "description": "Portrait-Looks: Studio, Editorial, Available Light.",
+            "promptParts": [
+              "portrait photography",
+              "85mm look",
+              "shallow depth of field"
+            ],
+            "tags": [
+              "Portrait",
+              "DOF"
+            ],
+            "children": [
+              {
+                "id": "photo_portrait_editorial",
+                "title": "Editorial",
+                "description": "Magazin-Look, clean & premium.",
+                "promptParts": [
+                  "editorial portrait photography",
+                  "high-end fashion editorial",
+                  "soft contrast"
+                ],
+                "tags": [
+                  "Fashion",
+                  "Studio"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_portrait_editorial.webp"
+              },
+              {
+                "id": "photo_portrait_cinematic",
+                "title": "Cinematic",
+                "description": "Filmstill-Look, moody light.",
+                "promptParts": [
+                  "cinematic portrait",
+                  "film still",
+                  "motivated lighting",
+                  "subtle film grain"
+                ],
+                "tags": [
+                  "Moody",
+                  "Film"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_portrait_cinematic.webp"
+              },
+              {
+                "id": "photo_portrait_street",
+                "title": "Street Portrait",
+                "description": "Available light, urban, spontan.",
+                "promptParts": [
+                  "street portrait",
+                  "available light",
+                  "35mm documentary look"
+                ],
+                "tags": [
+                  "Street",
+                  "Doc"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_portrait_street.webp"
+              },
+              {
+                "id": "photo_portrait_beauty",
+                "title": "Beauty",
+                "description": "Close-up, clean skin, controlled light.",
+                "promptParts": [
+                  "beauty portrait",
+                  "softbox lighting",
+                  "high detail skin"
+                ],
+                "tags": [
+                  "Beauty",
+                  "Close-up"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_portrait_beauty.webp"
+              },
+              {
+                "id": "photo_portrait_classic",
+                "title": "Classic Studio",
+                "description": "Zeitloses Studio-Portrait.",
+                "promptParts": [
+                  "classic studio portrait",
+                  "three-point lighting",
+                  "neutral background"
+                ],
+                "tags": [
+                  "Classic",
+                  "Studio"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_portrait_classic.webp"
+              }
+            ],
+            "thumb": "thumbs/photo_portrait.webp"
+          },
+          {
+            "id": "photo_landscape",
+            "title": "Landschaft",
+            "description": "Natur, Reise, Weite und Lichtstimmung.",
+            "promptParts": [
+              "landscape photography",
+              "wide angle",
+              "natural color grading"
+            ],
+            "tags": [
+              "Landscape",
+              "Travel"
+            ],
+            "children": [
+              {
+                "id": "photo_landscape_golden",
+                "title": "Golden Hour",
+                "description": "Warmes Licht, lange Schatten.",
+                "promptParts": [
+                  "golden hour",
+                  "warm sunlight",
+                  "long shadows"
+                ],
+                "tags": [
+                  "Nature",
+                  "Warm"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_landscape_golden.webp"
+              },
+              {
+                "id": "photo_landscape_blue",
+                "title": "Blue Hour",
+                "description": "Kühle Dämmerung, sanfte Kontraste.",
+                "promptParts": [
+                  "blue hour",
+                  "cool tones",
+                  "soft gradients"
+                ],
+                "tags": [
+                  "Nature",
+                  "Cool"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_landscape_blue.webp"
+              },
+              {
+                "id": "photo_landscape_drama",
+                "title": "Dramatic Weather",
+                "description": "Wolken, Regen, starke Stimmung.",
+                "promptParts": [
+                  "dramatic sky",
+                  "stormy weather",
+                  "high dynamic range"
+                ],
+                "tags": [
+                  "Drama",
+                  "Clouds"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_landscape_drama.webp"
+              },
+              {
+                "id": "photo_landscape_aerial",
+                "title": "Aerial / Drone",
+                "description": "Vogelperspektive, Muster & Geometrie.",
+                "promptParts": [
+                  "aerial drone photo",
+                  "top-down composition",
+                  "leading lines"
+                ],
+                "tags": [
+                  "Drone",
+                  "Geo"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_landscape_aerial.webp"
+              }
+            ],
+            "thumb": "thumbs/photo_landscape.webp"
+          },
+          {
+            "id": "photo_product",
+            "title": "Produkt",
+            "description": "Produktfotos: clean, luxury, macro, flatlay.",
+            "promptParts": [
+              "product photography",
+              "studio lighting",
+              "high quality"
+            ],
+            "tags": [
+              "Product",
+              "Studio"
+            ],
+            "children": [
+              {
+                "id": "photo_product_minimal",
+                "title": "Minimal Studio",
+                "description": "Clean, viel Negativraum.",
+                "promptParts": [
+                  "minimal product photo",
+                  "clean sweep background",
+                  "soft shadows"
+                ],
+                "tags": [
+                  "Clean",
+                  "Minimal"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_product_minimal.webp"
+              },
+              {
+                "id": "photo_product_mood",
+                "title": "Moody Product",
+                "description": "Dunkler Look, Spotlight, Luxus.",
+                "promptParts": [
+                  "moody product photography",
+                  "spotlight",
+                  "dark backdrop"
+                ],
+                "tags": [
+                  "Luxury",
+                  "Moody"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_product_mood.webp"
+              },
+              {
+                "id": "photo_product_macro",
+                "title": "Macro",
+                "description": "Extremdetail, Texturen.",
+                "promptParts": [
+                  "macro photography",
+                  "extreme close-up",
+                  "micro textures"
+                ],
+                "tags": [
+                  "Macro",
+                  "Detail"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_product_macro.webp"
+              },
+              {
+                "id": "photo_product_flatlay",
+                "title": "Flat Lay",
+                "description": "Top-down, ordentlich arrangiert.",
+                "promptParts": [
+                  "flat lay",
+                  "top-down",
+                  "neat arrangement"
+                ],
+                "tags": [
+                  "Top-down",
+                  "Layout"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_product_flatlay.webp"
+              }
+            ],
+            "thumb": "thumbs/photo_product.webp"
+          },
+          {
+            "id": "photo_documentary",
+            "title": "Dokumentarisch",
+            "description": "Reportage, Street, echte Szenen.",
+            "promptParts": [
+              "documentary photography",
+              "authentic",
+              "natural light"
+            ],
+            "tags": [
+              "Doc",
+              "Real"
+            ],
+            "children": [
+              {
+                "id": "photo_doc_reportage",
+                "title": "Reportage",
+                "description": "Echte Momente, ungestellt.",
+                "promptParts": [
+                  "photojournalism",
+                  "candid moment",
+                  "natural motion blur"
+                ],
+                "tags": [
+                  "News",
+                  "Candid"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_doc_reportage.webp"
+              },
+              {
+                "id": "photo_doc_analog",
+                "title": "Analog / Film",
+                "description": "Korn, Halation, leichte Fehler.",
+                "promptParts": [
+                  "35mm film",
+                  "film grain",
+                  "halation",
+                  "slight vignetting"
+                ],
+                "tags": [
+                  "Film",
+                  "Grain"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_doc_analog.webp"
+              },
+              {
+                "id": "photo_doc_bw",
+                "title": "Black & White",
+                "description": "Kontraste, Klassik, dokumentarisch.",
+                "promptParts": [
+                  "black and white photo",
+                  "strong contrast",
+                  "timeless"
+                ],
+                "tags": [
+                  "B/W",
+                  "Classic"
+                ],
+                "children": [],
+                "thumb": "thumbs/photo_doc_bw.webp"
+              }
+            ],
+            "thumb": "thumbs/photo_documentary.webp"
+          }
+        ],
+        "thumb": "thumbs/photo.webp"
+      },
+      {
+        "id": "illustration",
+        "title": "Illustration",
+        "description": "Gezeichnet, grafisch, stilisiert.",
+        "promptParts": [
+          "illustration",
+          "stylized",
+          "clean shapes"
+        ],
+        "tags": [
+          "zeichnerisch",
+          "stilisierung"
+        ],
+        "children": [
+          {
+            "id": "illus_anime",
+            "title": "Anime",
+            "description": "Anime-/Manga-Looks (moderne & retro).",
+            "promptParts": [
+              "anime style",
+              "cel shading",
+              "clean lineart"
+            ],
+            "tags": [
+              "Lineart",
+              "Cel"
+            ],
+            "children": [
+              {
+                "id": "illus_anime_modern",
+                "title": "Modern Anime",
+                "description": "Sauber, modern, kontrolliert.",
+                "promptParts": [
+                  "modern anime style",
+                  "clean lineart",
+                  "soft cel shading"
+                ],
+                "tags": [
+                  "Modern",
+                  "Lineart"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_anime_modern.webp"
+              },
+              {
+                "id": "illus_anime_80s",
+                "title": "Retro 80s Sci-Fi",
+                "description": "Neon, Retro-Futurismus, Cel-Shading.",
+                "promptParts": [
+                  "retro 1980s anime",
+                  "neon highlights",
+                  "retro-futuristic sci-fi"
+                ],
+                "tags": [
+                  "Retro",
+                  "Sci-Fi"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_anime_80s.webp"
+              },
+              {
+                "id": "illus_anime_90s",
+                "title": "90s OVA",
+                "description": "Hand-drawn feel, dramatischer Look.",
+                "promptParts": [
+                  "1990s OVA anime",
+                  "hand-drawn feel",
+                  "subtle grain"
+                ],
+                "tags": [
+                  "90s",
+                  "OVA"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_anime_90s.webp"
+              },
+              {
+                "id": "illus_anime_watercolor",
+                "title": "Anime Watercolor",
+                "description": "Wässrige Textur, weich, poetisch.",
+                "promptParts": [
+                  "anime watercolor",
+                  "paper texture",
+                  "soft bleeding edges"
+                ],
+                "tags": [
+                  "Watercolor",
+                  "Soft"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_anime_watercolor.webp"
+              }
+            ],
+            "thumb": "thumbs/illus_anime.webp"
+          },
+          {
+            "id": "illus_comic",
+            "title": "Comic",
+            "description": "Panel-tauglich, klare Konturen, starke Silhouetten.",
+            "promptParts": [
+              "comic style",
+              "bold outlines",
+              "dynamic composition"
+            ],
+            "tags": [
+              "Ink",
+              "Panels"
+            ],
+            "children": [
+              {
+                "id": "illus_comic_ink",
+                "title": "Ink & Line",
+                "description": "Tusche, klare Linien, Schraffur.",
+                "promptParts": [
+                  "ink drawing",
+                  "crosshatching",
+                  "bold outlines"
+                ],
+                "tags": [
+                  "Ink",
+                  "Hatch"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_comic_ink.webp"
+              },
+              {
+                "id": "illus_comic_euro",
+                "title": "Franco-Belgian",
+                "description": "Ligne claire, Abenteuer.",
+                "promptParts": [
+                  "ligne claire",
+                  "franco-belgian comic",
+                  "clean colors"
+                ],
+                "tags": [
+                  "Ligne claire",
+                  "EU"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_comic_euro.webp"
+              },
+              {
+                "id": "illus_comic_american",
+                "title": "American Comic",
+                "description": "Dynamik, kräftige Schatten.",
+                "promptParts": [
+                  "american comic style",
+                  "dynamic shading",
+                  "bold silhouettes"
+                ],
+                "tags": [
+                  "US",
+                  "Dynamic"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_comic_american.webp"
+              },
+              {
+                "id": "illus_comic_manga",
+                "title": "Manga B/W",
+                "description": "Raster, Speedlines, s/w.",
+                "promptParts": [
+                  "manga black and white",
+                  "screentones",
+                  "speed lines"
+                ],
+                "tags": [
+                  "Manga",
+                  "B/W"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_comic_manga.webp"
+              }
+            ],
+            "thumb": "thumbs/illus_comic.webp"
+          },
+          {
+            "id": "illus_painterly",
+            "title": "Malerisch",
+            "description": "Malstile und Texturen.",
+            "promptParts": [
+              "painterly illustration",
+              "canvas texture"
+            ],
+            "tags": [
+              "Paint",
+              "Texture"
+            ],
+            "children": [
+              {
+                "id": "illus_paint_oil",
+                "title": "Ölmalerei",
+                "description": "Pinselstriche, Tiefe, klassisch.",
+                "promptParts": [
+                  "oil painting",
+                  "visible brush strokes",
+                  "painterly"
+                ],
+                "tags": [
+                  "Oil",
+                  "Classic"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_paint_oil.webp"
+              },
+              {
+                "id": "illus_paint_gouache",
+                "title": "Gouache",
+                "description": "Deckend, matte Flächen.",
+                "promptParts": [
+                  "gouache painting",
+                  "matte finish",
+                  "flat shapes"
+                ],
+                "tags": [
+                  "Gouache",
+                  "Matte"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_paint_gouache.webp"
+              },
+              {
+                "id": "illus_paint_impasto",
+                "title": "Impasto",
+                "description": "Dick aufgetragene Farbe, starke Textur.",
+                "promptParts": [
+                  "impasto",
+                  "thick paint",
+                  "strong texture"
+                ],
+                "tags": [
+                  "Texture",
+                  "Bold"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_paint_impasto.webp"
+              },
+              {
+                "id": "illus_paint_pastel",
+                "title": "Pastellkreide",
+                "description": "Körnig, weich, Papier.",
+                "promptParts": [
+                  "soft pastel",
+                  "chalk texture",
+                  "paper grain"
+                ],
+                "tags": [
+                  "Pastel",
+                  "Soft"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_paint_pastel.webp"
+              }
+            ],
+            "thumb": "thumbs/illus_painterly.webp"
+          },
+          {
+            "id": "illus_lineart",
+            "title": "Line Art & Print",
+            "description": "Reduziert, druckartig, grafisch.",
+            "promptParts": [
+              "line art",
+              "clean strokes"
+            ],
+            "tags": [
+              "Line",
+              "Print"
+            ],
+            "children": [
+              {
+                "id": "illus_line_minimal",
+                "title": "Minimal Line",
+                "description": "Sehr reduziert, elegant.",
+                "promptParts": [
+                  "minimal line art",
+                  "single line",
+                  "negative space"
+                ],
+                "tags": [
+                  "Minimal",
+                  "Line"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_line_minimal.webp"
+              },
+              {
+                "id": "illus_line_engraving",
+                "title": "Gravur / Kupferstich",
+                "description": "Feine Linien, historisch.",
+                "promptParts": [
+                  "engraving",
+                  "etching",
+                  "fine linework"
+                ],
+                "tags": [
+                  "Engraving",
+                  "Vintage"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_line_engraving.webp"
+              },
+              {
+                "id": "illus_line_woodcut",
+                "title": "Holzschnitt",
+                "description": "Grob, druckartig, kontrastreich.",
+                "promptParts": [
+                  "woodcut print",
+                  "high contrast",
+                  "rough texture"
+                ],
+                "tags": [
+                  "Woodcut",
+                  "Print"
+                ],
+                "children": [],
+                "thumb": "thumbs/illus_line_woodcut.webp"
+              }
+            ],
+            "thumb": "thumbs/illus_lineart.webp"
+          }
+        ],
+        "thumb": "thumbs/illustration.webp"
+      },
+      {
+        "id": "3d",
+        "title": "3D / Render",
+        "description": "CGI, Materialität, Studiolicht, Rendering-Looks.",
+        "promptParts": [
+          "3D render",
+          "global illumination",
+          "high quality materials"
+        ],
+        "tags": [
+          "CGI",
+          "Material"
+        ],
+        "children": [
+          {
+            "id": "3d_character",
+            "title": "Character",
+            "description": "3D Figuren-Rendering, stylized bis real.",
+            "promptParts": [
+              "3D render",
+              "global illumination",
+              "high quality"
+            ],
+            "tags": [
+              "CGI",
+              "Figur"
+            ],
+            "children": [
+              {
+                "id": "3d_char_stylized",
+                "title": "Stylized Character",
+                "description": "Große Formen, weiches Licht.",
+                "promptParts": [
+                  "stylized 3D character",
+                  "soft studio lighting",
+                  "smooth materials"
+                ],
+                "tags": [
+                  "Stylized",
+                  "Character"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_char_stylized.webp"
+              },
+              {
+                "id": "3d_char_realistic",
+                "title": "Realistic Character",
+                "description": "PBR, glaubwürdige Haut & Haare.",
+                "promptParts": [
+                  "realistic 3D character",
+                  "PBR",
+                  "subsurface scattering",
+                  "hair strands"
+                ],
+                "tags": [
+                  "PBR",
+                  "Real"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_char_realistic.webp"
+              },
+              {
+                "id": "3d_char_vinyl",
+                "title": "Vinyl / Toy",
+                "description": "Glossy, sammelbar, cute.",
+                "promptParts": [
+                  "vinyl toy",
+                  "glossy plastic",
+                  "cute proportions"
+                ],
+                "tags": [
+                  "Toy",
+                  "Glossy"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_char_vinyl.webp"
+              }
+            ],
+            "thumb": "thumbs/3d_character.webp"
+          },
+          {
+            "id": "3d_archviz",
+            "title": "ArchViz",
+            "description": "Architekturvisualisierung, fotonah.",
+            "promptParts": [
+              "architectural visualization",
+              "ray traced"
+            ],
+            "tags": [
+              "Interior",
+              "Raytrace"
+            ],
+            "children": [
+              {
+                "id": "3d_arch_interior",
+                "title": "Interior",
+                "description": "Materialität, Tageslicht.",
+                "promptParts": [
+                  "interior render",
+                  "natural daylight",
+                  "soft shadows"
+                ],
+                "tags": [
+                  "Interior",
+                  "Light"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_arch_interior.webp"
+              },
+              {
+                "id": "3d_arch_exterior",
+                "title": "Exterior",
+                "description": "Umgebungslicht, Himmel.",
+                "promptParts": [
+                  "exterior architectural render",
+                  "physically based sky",
+                  "realistic materials"
+                ],
+                "tags": [
+                  "Exterior",
+                  "Arch"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_arch_exterior.webp"
+              },
+              {
+                "id": "3d_arch_night",
+                "title": "Night Scene",
+                "description": "Nacht, künstliches Licht, Glow.",
+                "promptParts": [
+                  "night render",
+                  "practical lights",
+                  "bloom"
+                ],
+                "tags": [
+                  "Night",
+                  "Glow"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_arch_night.webp"
+              }
+            ],
+            "thumb": "thumbs/3d_archviz.webp"
+          },
+          {
+            "id": "3d_product",
+            "title": "Produkt-Render",
+            "description": "CG Produkt-Renderings in Varianten.",
+            "promptParts": [
+              "product render",
+              "high quality reflections"
+            ],
+            "tags": [
+              "Product",
+              "CG"
+            ],
+            "children": [
+              {
+                "id": "3d_product_clean",
+                "title": "Clean Studio",
+                "description": "White sweep, perfekt ausgeleuchtet.",
+                "promptParts": [
+                  "clean studio render",
+                  "white background",
+                  "softbox reflections"
+                ],
+                "tags": [
+                  "Clean",
+                  "Studio"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_product_clean.webp"
+              },
+              {
+                "id": "3d_product_clay",
+                "title": "Clay Render",
+                "description": "Nur Form, matte Shader.",
+                "promptParts": [
+                  "clay render",
+                  "matte shader",
+                  "form study"
+                ],
+                "tags": [
+                  "Clay",
+                  "Form"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_product_clay.webp"
+              },
+              {
+                "id": "3d_product_futuristic",
+                "title": "Futuristic",
+                "description": "Metall/Glas, Neon rim light.",
+                "promptParts": [
+                  "futuristic product render",
+                  "metal and glass",
+                  "neon rim light"
+                ],
+                "tags": [
+                  "Futuristic",
+                  "Metal"
+                ],
+                "children": [],
+                "thumb": "thumbs/3d_product_futuristic.webp"
+              }
+            ],
+            "thumb": "thumbs/3d_product.webp"
+          }
+        ],
+        "thumb": "thumbs/3d.webp"
+      },
+      {
+        "id": "graphic",
+        "title": "Grafik / Design",
+        "description": "Plakat, UI, Branding, klare grafische Regeln.",
+        "promptParts": [
+          "graphic design",
+          "grid layout",
+          "minimal palette"
+        ],
+        "tags": [
+          "Layout",
+          "Typo"
+        ],
+        "children": [
+          {
+            "id": "graphic_poster",
+            "title": "Poster",
+            "description": "Plakat-Looks: Typo + Key Visual.",
+            "promptParts": [
+              "poster design",
+              "grid layout",
+              "title treatment"
+            ],
+            "tags": [
+              "Poster",
+              "Typo"
+            ],
+            "children": [
+              {
+                "id": "graphic_poster_minimal",
+                "title": "Minimal Poster",
+                "description": "Klare Typo, starke Fläche.",
+                "promptParts": [
+                  "minimal poster design",
+                  "strong typography",
+                  "simple shapes"
+                ],
+                "tags": [
+                  "Minimal",
+                  "Typo"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_poster_minimal.webp"
+              },
+              {
+                "id": "graphic_poster_retro",
+                "title": "Retro Poster",
+                "description": "Vintage Farben, Druck-Textur.",
+                "promptParts": [
+                  "retro poster",
+                  "print texture",
+                  "limited palette"
+                ],
+                "tags": [
+                  "Retro",
+                  "Print"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_poster_retro.webp"
+              },
+              {
+                "id": "graphic_poster_keyart",
+                "title": "Cinematic Key Art",
+                "description": "Filmplakat-Feeling, dramatisch.",
+                "promptParts": [
+                  "cinematic key art poster",
+                  "dramatic composition",
+                  "title treatment"
+                ],
+                "tags": [
+                  "Key Art",
+                  "Film"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_poster_keyart.webp"
+              },
+              {
+                "id": "graphic_poster_brutal",
+                "title": "Brutalism",
+                "description": "Roh, kantig, typografisch.",
+                "promptParts": [
+                  "brutalist poster",
+                  "raw typography",
+                  "high contrast layout"
+                ],
+                "tags": [
+                  "Brutalism",
+                  "Experimental"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_poster_brutal.webp"
+              }
+            ],
+            "thumb": "thumbs/graphic_poster.webp"
+          },
+          {
+            "id": "graphic_ui",
+            "title": "UI / App",
+            "description": "UI-Design Sprachen und Patterns.",
+            "promptParts": [
+              "UI design",
+              "clean layout",
+              "component system"
+            ],
+            "tags": [
+              "UI",
+              "Layout"
+            ],
+            "children": [
+              {
+                "id": "graphic_ui_neumorph",
+                "title": "Neumorphism",
+                "description": "Soft shadows, moderne UI-Karten.",
+                "promptParts": [
+                  "neumorphism UI",
+                  "soft shadows",
+                  "rounded cards"
+                ],
+                "tags": [
+                  "UI",
+                  "Soft"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_ui_neumorph.webp"
+              },
+              {
+                "id": "graphic_ui_glass",
+                "title": "Glassmorphism",
+                "description": "Transparenz, Blur, Glow.",
+                "promptParts": [
+                  "glassmorphism UI",
+                  "frosted glass",
+                  "blur"
+                ],
+                "tags": [
+                  "UI",
+                  "Glass"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_ui_glass.webp"
+              },
+              {
+                "id": "graphic_ui_dark",
+                "title": "Dark Elegant",
+                "description": "Dunkle, elegante Oberfläche.",
+                "promptParts": [
+                  "dark UI design",
+                  "subtle gradients",
+                  "high readability"
+                ],
+                "tags": [
+                  "UI",
+                  "Dark"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_ui_dark.webp"
+              },
+              {
+                "id": "graphic_ui_dashboard",
+                "title": "Dashboard",
+                "description": "KPI, Charts, Grid-Layout.",
+                "promptParts": [
+                  "dashboard UI",
+                  "data visualization",
+                  "clean grid"
+                ],
+                "tags": [
+                  "UI",
+                  "Data"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_ui_dashboard.webp"
+              }
+            ],
+            "thumb": "thumbs/graphic_ui.webp"
+          },
+          {
+            "id": "graphic_logo",
+            "title": "Logo / Branding",
+            "description": "Markenlook: Logo, Emblem, Signet.",
+            "promptParts": [
+              "brand identity",
+              "logo design",
+              "vector clean"
+            ],
+            "tags": [
+              "Brand",
+              "Vector"
+            ],
+            "children": [
+              {
+                "id": "graphic_logo_minimal",
+                "title": "Minimal Logo",
+                "description": "Geometrisch, klar.",
+                "promptParts": [
+                  "minimal logo",
+                  "geometric shapes",
+                  "simple mark"
+                ],
+                "tags": [
+                  "Logo",
+                  "Minimal"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_logo_minimal.webp"
+              },
+              {
+                "id": "graphic_logo_vintage",
+                "title": "Vintage Badge",
+                "description": "Emblem, Retro.",
+                "promptParts": [
+                  "vintage badge logo",
+                  "emblem",
+                  "stamp style"
+                ],
+                "tags": [
+                  "Logo",
+                  "Vintage"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_logo_vintage.webp"
+              },
+              {
+                "id": "graphic_logo_mascot",
+                "title": "Mascot",
+                "description": "Character-Logo.",
+                "promptParts": [
+                  "mascot logo",
+                  "bold outlines",
+                  "simple colors"
+                ],
+                "tags": [
+                  "Logo",
+                  "Mascot"
+                ],
+                "children": [],
+                "thumb": "thumbs/graphic_logo_mascot.webp"
+              }
+            ],
+            "thumb": "thumbs/graphic_logo.webp"
+          }
+        ],
+        "thumb": "thumbs/graphic.webp"
+      },
+      {
+        "id": "traditional",
+        "title": "Traditionell",
+        "description": "Analoge Medien und klassische Techniken.",
+        "promptParts": [
+          "traditional media",
+          "handmade look"
+        ],
+        "tags": [
+          "Analog",
+          "Art"
+        ],
+        "children": [
+          {
+            "id": "trad_charcoal",
+            "title": "Kohlezeichnung",
+            "description": "Staubig, weich, schattig.",
+            "promptParts": [
+              "charcoal drawing",
+              "smudged shading",
+              "paper texture"
+            ],
+            "tags": [
+              "Charcoal",
+              "Paper"
+            ],
+            "children": [],
+            "thumb": "thumbs/trad_charcoal.webp"
+          },
+          {
+            "id": "trad_ink_wash",
+            "title": "Ink Wash",
+            "description": "Tusche mit Wash, Pinselspuren.",
+            "promptParts": [
+              "ink wash",
+              "brush strokes",
+              "rice paper texture"
+            ],
+            "tags": [
+              "Ink",
+              "Wash"
+            ],
+            "children": [],
+            "thumb": "thumbs/trad_ink_wash.webp"
+          },
+          {
+            "id": "trad_watercolor",
+            "title": "Aquarell",
+            "description": "Transparente Farben, Papier.",
+            "promptParts": [
+              "watercolor",
+              "paper texture",
+              "soft bleeding"
+            ],
+            "tags": [
+              "Watercolor",
+              "Paper"
+            ],
+            "children": [],
+            "thumb": "thumbs/trad_watercolor.webp"
+          },
+          {
+            "id": "trad_pencil",
+            "title": "Bleistift",
+            "description": "Skizzenhaft, feine Linien.",
+            "promptParts": [
+              "pencil sketch",
+              "fine lines",
+              "graphite shading"
+            ],
+            "tags": [
+              "Sketch",
+              "Graphite"
+            ],
+            "children": [],
+            "thumb": "thumbs/trad_pencil.webp"
+          },
+          {
+            "id": "trad_collage",
+            "title": "Collage",
+            "description": "Papier, Cutouts, Layer.",
+            "promptParts": [
+              "paper collage",
+              "mixed media",
+              "cutout shapes"
+            ],
+            "tags": [
+              "Collage",
+              "Layer"
+            ],
+            "children": [],
+            "thumb": "thumbs/trad_collage.webp"
+          }
+        ],
+        "thumb": "thumbs/traditional.webp"
+      },
+      {
+        "id": "abstract",
+        "title": "Abstrakt / Experimentell",
+        "description": "Patterns, Glitch, minimal & surreal.",
+        "promptParts": [
+          "abstract art",
+          "conceptual"
+        ],
+        "tags": [
+          "Experimental",
+          "Abstract"
+        ],
+        "children": [
+          {
+            "id": "abs_geometric",
+            "title": "Geometrisch",
+            "description": "Formen, Patterns, klare Regeln.",
+            "promptParts": [
+              "abstract geometric",
+              "clean shapes",
+              "pattern design"
+            ],
+            "tags": [
+              "Geo",
+              "Pattern"
+            ],
+            "children": [],
+            "thumb": "thumbs/abs_geometric.webp"
+          },
+          {
+            "id": "abs_glitch",
+            "title": "Glitch",
+            "description": "Scanlines, digitale Artefakte.",
+            "promptParts": [
+              "glitch art",
+              "scanlines",
+              "digital artifacts"
+            ],
+            "tags": [
+              "Glitch",
+              "Digital"
+            ],
+            "children": [],
+            "thumb": "thumbs/abs_glitch.webp"
+          },
+          {
+            "id": "abs_fractal",
+            "title": "Fraktal",
+            "description": "Rekursion, mathematische Muster.",
+            "promptParts": [
+              "fractal art",
+              "recursive patterns",
+              "high detail"
+            ],
+            "tags": [
+              "Fractal",
+              "Math"
+            ],
+            "children": [],
+            "thumb": "thumbs/abs_fractal.webp"
+          },
+          {
+            "id": "abs_minimal",
+            "title": "Minimal Abstract",
+            "description": "Reduziert, ruhig.",
+            "promptParts": [
+              "minimal abstract",
+              "calm composition",
+              "negative space"
+            ],
+            "tags": [
+              "Minimal",
+              "Calm"
+            ],
+            "children": [],
+            "thumb": "thumbs/abs_minimal.webp"
+          },
+          {
+            "id": "abs_surreal",
+            "title": "Surreal Abstract",
+            "description": "Traumlogik, unerwartete Formen.",
+            "promptParts": [
+              "surreal abstract",
+              "dreamlike",
+              "unexpected forms"
+            ],
+            "tags": [
+              "Surreal",
+              "Dream"
+            ],
+            "children": [],
+            "thumb": "thumbs/abs_surreal.webp"
+          }
+        ],
+        "thumb": "thumbs/abstract.webp"
+      }
+    ]
+  }
+}

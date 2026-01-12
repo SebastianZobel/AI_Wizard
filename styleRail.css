@@ -1,0 +1,281 @@
+/* styleRail.css
+   Minimaler, modularer "Rail" (Carousel) für Screen 3 (Style wählen),
+   angelehnt an style_index.html – aber optisch passend zur Wizard-App.
+*/
+
+.styleNav{
+  display:flex;
+  flex-direction: column;
+  margin-top: 12px;
+  height: 100%;
+  min-height: 0;
+}
+
+.styleNav .snBreadcrumbs{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.styleNav .snCrumb{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #cfd7e6;
+  background: #e8edf6;
+  color: #6b7280;
+  cursor:pointer;
+  font-size: 12px;
+  user-select:none;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.styleNav .snCrumb:hover{
+  transform: translateY(-1px);
+  border-color: rgba(148,163,184,.35);
+  background: #f4f9ff;
+}
+.styleNav .snCrumb[aria-current="page"]{
+  border-color: rgba(13,107,255,.55);
+  background: #eef3ff;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.styleNav .snHead{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.styleNav .snTitle{
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--text);
+  letter-spacing: .2px;
+}
+.styleNav .snMeta{
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.styleNav .snRailHeader{
+  display:flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.styleNav .snIconBtn{
+  width: 38px;
+  height: 34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 0;
+}
+
+.styleNav .snRailWrap{
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius2);
+  background: #f6f9ff;
+  overflow:hidden;
+  box-shadow: 0 8px 20px rgba(13,107,255,.08);
+  flex: 1;
+  min-height: 0;
+  display:flex;
+}
+
+.styleNav .snFade{
+  position:absolute;
+  top:0; bottom:0;
+  width: 46px;
+  pointer-events:none;
+  z-index: 2;
+}
+.styleNav .snFade.left{
+  left:0;
+  background: linear-gradient(90deg, #f6f9ff, rgba(246,249,255,0));
+}
+.styleNav .snFade.right{
+  right:0;
+  background: linear-gradient(270deg, #f6f9ff, rgba(246,249,255,0));
+}
+
+.styleNav .snRail{
+  display:flex;
+  gap: 12px;
+  padding: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  outline: none;
+  height: 100%;
+  align-items: center;
+}
+.styleNav .snRail:focus{
+  box-shadow: 0 0 0 3px rgba(13,107,255,.14) inset;
+}
+
+.styleNav .snCard{
+  width: 210px;
+  min-width: 210px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fbfdff;
+  overflow:hidden;
+  cursor:pointer;
+  scroll-snap-align: center;
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease, background .12s ease;
+  position: relative;
+}
+.styleNav .snCard:not(.selected){
+  transform: scale(0.96);
+  opacity: 0.85;
+}
+.styleNav .snCard:hover{
+  transform: translateY(-1px);
+  border-color: rgba(13,107,255,.24);
+  box-shadow: 0 10px 26px rgba(13,107,255,.10);
+  background: #f4f9ff;
+}
+.styleNav .snCard.selected{
+  border-color: rgba(13,107,255,.75);
+  background: radial-gradient(circle at 20% 20%, rgba(13,107,255,.18), transparent 45%), linear-gradient(145deg, rgba(13,107,255,.12), rgba(176,93,223,.12));
+  box-shadow:
+    0 14px 36px rgba(13,107,255,.18),
+    0 0 0 3px rgba(13,107,255,.14);
+  transform: scale(1.02);
+}
+
+.styleNav .snPoster{
+  position: relative;
+  height: 128px;
+  background: rgba(13,107,255,.06);
+  border-bottom: 1px solid var(--line);
+  overflow:hidden;
+}
+.styleNav .snPoster img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.styleNav .snBadgePlus{
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,107,255,.20);
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(6px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 18px;
+  line-height: 1;
+  color: rgba(13,107,255,.85);
+  user-select:none;
+  cursor:pointer;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.styleNav .snBadgePlus:hover{
+  transform: translateY(-1px) scale(1.02);
+  border-color: rgba(13,107,255,.40);
+  background: rgba(244,249,255,.92);
+}
+.styleNav .snBadgePlus:focus{
+  outline: 2px solid rgba(13,107,255,.45);
+  outline-offset: 2px;
+}
+.styleNav .snCard.leaf .snBadgePlus{
+  display:none;
+}
+
+.styleNav .snBody{
+  padding: 12px 12px 14px;
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 118px;
+}
+
+.styleNav .snName{
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.styleNav .snDesc{
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.35;
+  display:-webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+  min-height: 50px;
+}
+.styleNav .snTags{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.styleNav .snTag{
+  font-size: 11px;
+  padding: 4px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #eef3ff;
+  color: var(--muted);
+}
+
+.styleNav .snHint{
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.styleNav .snStatus{
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted2);
+  min-height: 16px;
+}
+/* ------------------------------------------------------------------------- */
+/* Step 3: Rail maximal hoch nutzen (Cards + Poster füllen die Höhe)          */
+/* (Overrides – ans Ende der Datei setzen)                                    */
+/* ------------------------------------------------------------------------- */
+
+.styleNav{
+  flex: 1;         /* nutzt die verfügbare Höhe im Mount */
+  min-height: 0;
+}
+
+.styleNav .snRail{
+  align-items: stretch; /* Cards auf volle Höhe strecken */
+}
+
+.styleNav .snCard{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.styleNav .snPoster{
+  flex: 1 1 auto;   /* Poster wächst mit */
+  height: auto;     /* überschreibt height:128px */
+  min-height: 160px; /* optional: nicht zu klein */
+}
+
+.styleNav .snBody{
+  flex: 0 0 auto;   /* Textbereich bleibt unten */
+}
