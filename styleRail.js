@@ -205,8 +205,8 @@ const btnRight = rootWrap.querySelector('[data-act="right"]');
         card.tabIndex = 0;
 
         const thumbUrl = normalizeThumb(child.thumb);
-        const thumbSrc = thumbUrl || FALLBACK_THUMB;
-        const thumbImg = `<img src="${esc(thumbSrc)}" alt="${esc(child.title)} Thumbnail" loading="lazy">`;
+        const thumbSrc = FALLBACK_THUMB;
+        const thumbImg = `<img src="${esc(thumbSrc)}" alt="${esc(child.title)} Thumbnail" loading="lazy" data-thumb="${esc(thumbUrl)}">`;
 
         const tags = Array.isArray(child.tags) ? child.tags : [];
         const tagsHtml = tags.slice(0, 3).map(t => `<span class="snTag">${esc(t)}</span>`).join("");
@@ -226,6 +226,14 @@ const btnRight = rootWrap.querySelector('[data-act="right"]');
         `;
         const imgEl = card.querySelector("img");
         if(imgEl){
+          if(thumbUrl){
+            const preload = new Image();
+            preload.onload = () => { if(!destroyed) imgEl.src = thumbUrl; };
+            preload.onerror = () => { imgEl.src = FALLBACK_THUMB; };
+            preload.src = thumbUrl;
+          }else{
+            imgEl.src = FALLBACK_THUMB;
+          }
           imgEl.addEventListener("error", () => {
             imgEl.src = FALLBACK_THUMB;
           }, { once: true });
