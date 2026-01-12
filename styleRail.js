@@ -25,6 +25,7 @@
     if(t.startsWith("thumbs/")) return "./" + t;
     return "./" + t;
   }
+  const FALLBACK_THUMB = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='160' viewBox='0 0 240 160'><rect width='240' height='160' fill='%23e7ecf6'/><path d='M64 56h112v8H64zm0 24h112v8H64zm0 24h72v8H64z' fill='%238aa1c7'/></svg>";
 
   function dedupePromptParts(parts){
     const seen = new Set();
@@ -204,7 +205,8 @@ const btnRight = rootWrap.querySelector('[data-act="right"]');
         card.tabIndex = 0;
 
         const thumbUrl = normalizeThumb(child.thumb);
-        const thumbImg = thumbUrl ? `<img src="${esc(thumbUrl)}" alt="${esc(child.title)} Thumbnail" loading="lazy">` : "";
+        const thumbSrc = thumbUrl || FALLBACK_THUMB;
+        const thumbImg = `<img src="${esc(thumbSrc)}" alt="${esc(child.title)} Thumbnail" loading="lazy">`;
 
         const tags = Array.isArray(child.tags) ? child.tags : [];
         const tagsHtml = tags.slice(0, 3).map(t => `<span class="snTag">${esc(t)}</span>`).join("");
@@ -222,6 +224,12 @@ const btnRight = rootWrap.querySelector('[data-act="right"]');
             <div class="snTags">${tagsHtml}</div>
           </div>
         `;
+        const imgEl = card.querySelector("img");
+        if(imgEl){
+          imgEl.addEventListener("error", () => {
+            imgEl.src = FALLBACK_THUMB;
+          }, { once: true });
+        }
 
         function selectCard(){
           selectedChildId = child.id;
