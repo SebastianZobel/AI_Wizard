@@ -9,6 +9,349 @@ const SHOW_STATUS_PILL = false;
 const ENABLE_CLEAR_GALLERY = false;
 const ENABLE_DELETE_IMAGE = true;
 
+const THEME_KEY = "css_theme_v1";
+const THEMES = [
+  {
+    id: "telefonica",
+    label: "Telefonica (aktuell)",
+    vars: {
+      bg: "#f9fbff",
+      "bg-spot-1": "rgba(176,93,223,.16)",
+      "bg-spot-2": "rgba(13,107,255,.12)",
+      "bg-spot-3": "rgba(82,191,192,.12)",
+      panel: "#ffffff",
+      line: "#dce8ff",
+      line2: "#c9dafc",
+      text: "#1f2f4a",
+      muted: "rgba(31,47,74,.68)",
+      muted2: "rgba(31,47,74,.50)",
+      primary: "#0d6bff",
+      "accent-coral": "#e76f6f",
+      "accent-teal": "#52bfc0",
+      "accent-purple": "#b05ddf",
+      shadow: "0 16px 48px rgba(13,107,255,.08)",
+      "panel-soft": "#f6f9ff",
+      "panel-soft-2": "#eef2f8",
+      "panel-subtle": "#fbfdff",
+      "panel-subtle-2": "#f4f9ff",
+      "panel-strong": "rgba(16,24,38,.55)",
+      "panel-strong-2": "rgba(16,24,38,.35)",
+      "panel-strong-3": "rgba(8,12,20,.55)",
+      "text-contrast": "rgba(230,237,243,.92)",
+      "text-contrast-muted": "rgba(230,237,243,.86)",
+      "text-on-primary": "#0e214c",
+      "input-bg": "#ffffff",
+      "progress-track": "#e8f0ff",
+      "progress-bar": "linear-gradient(90deg, rgba(13,107,255,.95), rgba(82,191,192,.92))"
+    }
+  },
+  {
+    id: "telefonica-dark",
+    label: "Telefonica Dark",
+    vars: {
+      bg: "#0c111a",
+      "bg-spot-1": "rgba(176,93,223,.20)",
+      "bg-spot-2": "rgba(13,107,255,.22)",
+      "bg-spot-3": "rgba(82,191,192,.18)",
+      panel: "#121a28",
+      line: "#263244",
+      line2: "#33445c",
+      text: "#e8eef8",
+      muted: "rgba(232,238,248,.68)",
+      muted2: "rgba(232,238,248,.50)",
+      primary: "#4d8dff",
+      "accent-coral": "#e76f6f",
+      "accent-teal": "#52bfc0",
+      "accent-purple": "#b05ddf",
+      shadow: "0 16px 48px rgba(0,0,0,.45)",
+      "panel-soft": "#171f2f",
+      "panel-soft-2": "#1d273a",
+      "panel-subtle": "#141c2a",
+      "panel-subtle-2": "#1a2436",
+      "panel-strong": "rgba(8,12,18,.65)",
+      "panel-strong-2": "rgba(8,12,18,.45)",
+      "panel-strong-3": "rgba(5,8,12,.75)",
+      "text-contrast": "#f2f5fb",
+      "text-contrast-muted": "rgba(242,245,251,.86)",
+      "text-on-primary": "#0b1424",
+      "input-bg": "#141c2a",
+      "progress-track": "#223149",
+      "progress-bar": "linear-gradient(90deg, rgba(77,141,255,.95), rgba(82,191,192,.92))"
+    }
+  },
+  {
+    id: "css2030",
+    label: "CSS 2030",
+    vars: {
+      bg: "#F1F4FF",
+      "bg-spot-1": "rgba(204,224,255,.65)",
+      "bg-spot-2": "rgba(237,248,249,.70)",
+      "bg-spot-3": "rgba(251,244,254,.55)",
+      panel: "#FFFFFF",
+      line: "#DEE0E7",
+      line2: "#9B9FAF",
+      text: "#001337",
+      muted: "rgba(0,19,55,.68)",
+      muted2: "rgba(0,19,55,.50)",
+      primary: "#0066FF",
+      "accent-coral": "#E66C64",
+      "accent-teal": "#59C2C9",
+      "accent-purple": "#C466EF",
+      shadow: "0 16px 48px rgba(0,102,255,.12)",
+      "panel-soft": "#F1F4FF",
+      "panel-soft-2": "#DCDFE6",
+      "panel-subtle": "#FFFFFF",
+      "panel-subtle-2": "#F1F4FF",
+      "panel-strong": "rgba(0,19,55,.55)",
+      "panel-strong-2": "rgba(0,19,55,.35)",
+      "panel-strong-3": "rgba(0,19,55,.70)",
+      "text-contrast": "rgba(245,247,255,.96)",
+      "text-contrast-muted": "rgba(245,247,255,.86)",
+      "text-on-primary": "#0b1b4a",
+      "input-bg": "#FFFFFF",
+      "progress-track": "#DEE0E7",
+      "progress-bar": "linear-gradient(90deg, rgba(0,102,255,.95), rgba(89,194,201,.92))"
+    }
+  },
+  {
+    id: "css2030-dark",
+    label: "CSS 2030 Dark",
+    vars: {
+      bg: "#0b1220",
+      "bg-spot-1": "rgba(0,102,255,.26)",
+      "bg-spot-2": "rgba(89,194,201,.20)",
+      "bg-spot-3": "rgba(196,102,239,.20)",
+      panel: "#121a2b",
+      line: "#25304a",
+      line2: "#334060",
+      text: "#f3f6ff",
+      muted: "rgba(243,246,255,.70)",
+      muted2: "rgba(243,246,255,.50)",
+      primary: "#66A3FF",
+      "accent-coral": "#F0A7A2",
+      "accent-teal": "#7ACED4",
+      "accent-purple": "#DCA3F5",
+      shadow: "0 16px 48px rgba(0,0,0,.45)",
+      "panel-soft": "#161f33",
+      "panel-soft-2": "#1c2740",
+      "panel-subtle": "#141c2d",
+      "panel-subtle-2": "#1a2438",
+      "panel-strong": "rgba(6,10,16,.65)",
+      "panel-strong-2": "rgba(6,10,16,.45)",
+      "panel-strong-3": "rgba(3,6,12,.75)",
+      "text-contrast": "#f3f6ff",
+      "text-contrast-muted": "rgba(243,246,255,.86)",
+      "text-on-primary": "#0b1424",
+      "input-bg": "#141c2d",
+      "progress-track": "#22314a",
+      "progress-bar": "linear-gradient(90deg, rgba(102,163,255,.95), rgba(122,206,212,.92))"
+    }
+  },
+  {
+    id: "alpine-ink",
+    label: "Alpine Ink",
+    vars: {
+      bg: "#F3F7FB",
+      "bg-spot-1": "rgba(139,111,217,.18)",
+      "bg-spot-2": "rgba(27,120,208,.14)",
+      "bg-spot-3": "rgba(55,182,178,.14)",
+      panel: "#FFFFFF",
+      line: "#D6E2F0",
+      line2: "#B7C5D8",
+      text: "#13253D",
+      muted: "rgba(19,37,61,.68)",
+      muted2: "rgba(19,37,61,.50)",
+      primary: "#1B78D0",
+      "accent-coral": "#F29B7A",
+      "accent-teal": "#37B6B2",
+      "accent-purple": "#8B6FD9",
+      shadow: "0 18px 46px rgba(27,120,208,.12)",
+      "panel-soft": "#F1F6FB",
+      "panel-soft-2": "#E6EDF6",
+      "panel-subtle": "#F7FAFF",
+      "panel-subtle-2": "#EEF3F9",
+      "panel-strong": "rgba(19,37,61,.55)",
+      "panel-strong-2": "rgba(19,37,61,.35)",
+      "panel-strong-3": "rgba(10,20,34,.60)",
+      "text-contrast": "rgba(235,241,249,.92)",
+      "text-contrast-muted": "rgba(235,241,249,.86)",
+      "text-on-primary": "#0f223a",
+      "input-bg": "#FFFFFF",
+      "progress-track": "#E3ECF7",
+      "progress-bar": "linear-gradient(90deg, rgba(27,120,208,.95), rgba(55,182,178,.92))"
+    }
+  },
+  {
+    id: "citrus-slate",
+    label: "Citrus Slate",
+    vars: {
+      bg: "#FFF7E8",
+      "bg-spot-1": "rgba(242,139,46,.18)",
+      "bg-spot-2": "rgba(155,106,214,.16)",
+      "bg-spot-3": "rgba(47,184,160,.14)",
+      panel: "#FFFFFF",
+      line: "#F2DCC0",
+      line2: "#E5C59C",
+      text: "#3C2B1A",
+      muted: "rgba(60,43,26,.68)",
+      muted2: "rgba(60,43,26,.50)",
+      primary: "#F28B2E",
+      "accent-coral": "#E25C4E",
+      "accent-teal": "#2FB8A0",
+      "accent-purple": "#9B6AD6",
+      shadow: "0 18px 46px rgba(242,139,46,.14)",
+      "panel-soft": "#FFF2E0",
+      "panel-soft-2": "#FBE7CA",
+      "panel-subtle": "#FFFAF2",
+      "panel-subtle-2": "#FFF0DD",
+      "panel-strong": "rgba(60,43,26,.55)",
+      "panel-strong-2": "rgba(60,43,26,.35)",
+      "panel-strong-3": "rgba(38,26,14,.60)",
+      "text-contrast": "rgba(255,250,245,.92)",
+      "text-contrast-muted": "rgba(255,250,245,.86)",
+      "text-on-primary": "#3A2513",
+      "input-bg": "#FFFFFF",
+      "progress-track": "#F4E2CA",
+      "progress-bar": "linear-gradient(90deg, rgba(242,139,46,.95), rgba(47,184,160,.92))"
+    }
+  },
+  {
+    id: "signal-dawn",
+    label: "Signal Dawn (hell)",
+    vars: {
+      bg: "#FFF4EE",
+      "bg-spot-1": "rgba(255,122,69,.20)",
+      "bg-spot-2": "rgba(89,194,201,.18)",
+      "bg-spot-3": "rgba(196,102,239,.14)",
+      panel: "#FFFFFF",
+      line: "#F0D7CC",
+      line2: "#E5C0B1",
+      text: "#3B2A2A",
+      muted: "rgba(59,42,42,.68)",
+      muted2: "rgba(59,42,42,.50)",
+      primary: "#FF7A45",
+      "accent-coral": "#E66C64",
+      "accent-teal": "#59C2C9",
+      "accent-purple": "#C466EF",
+      shadow: "0 18px 46px rgba(255,122,69,.14)",
+      "panel-soft": "#FFF1EA",
+      "panel-soft-2": "#FDE4D9",
+      "panel-subtle": "#FFF8F4",
+      "panel-subtle-2": "#FFEFE6",
+      "panel-strong": "rgba(59,42,42,.55)",
+      "panel-strong-2": "rgba(59,42,42,.35)",
+      "panel-strong-3": "rgba(36,24,24,.60)",
+      "text-contrast": "rgba(255,248,244,.92)",
+      "text-contrast-muted": "rgba(255,248,244,.86)",
+      "text-on-primary": "#3B2418",
+      "input-bg": "#FFFFFF",
+      "progress-track": "#F6D8CC",
+      "progress-bar": "linear-gradient(90deg, rgba(255,122,69,.95), rgba(89,194,201,.92))"
+    }
+  },
+  {
+    id: "signal-midnight",
+    label: "Signal Midnight (dunkel)",
+    vars: {
+      bg: "#12141B",
+      "bg-spot-1": "rgba(255,122,69,.20)",
+      "bg-spot-2": "rgba(89,194,201,.16)",
+      "bg-spot-3": "rgba(196,102,239,.16)",
+      panel: "#1B2230",
+      line: "#2A3446",
+      line2: "#3A4861",
+      text: "#E6EAF2",
+      muted: "rgba(230,234,242,.68)",
+      muted2: "rgba(230,234,242,.50)",
+      primary: "#FF7A45",
+      "accent-coral": "#E66C64",
+      "accent-teal": "#59C2C9",
+      "accent-purple": "#C466EF",
+      shadow: "0 18px 46px rgba(0,0,0,.40)",
+      "panel-soft": "#1C2433",
+      "panel-soft-2": "#222C3D",
+      "panel-subtle": "#19202D",
+      "panel-subtle-2": "#20283A",
+      "panel-strong": "rgba(8,12,18,.65)",
+      "panel-strong-2": "rgba(8,12,18,.45)",
+      "panel-strong-3": "rgba(5,8,12,.75)",
+      "text-contrast": "#F2F5FB",
+      "text-contrast-muted": "rgba(242,245,251,.86)",
+      "text-on-primary": "#0b1424",
+      "input-bg": "#1A2332",
+      "progress-track": "#2B364B",
+      "progress-bar": "linear-gradient(90deg, rgba(255,122,69,.95), rgba(89,194,201,.92))"
+    }
+  },
+  {
+    id: "glacier-light",
+    label: "Glacier Light (hell)",
+    vars: {
+      bg: "#F4FBFF",
+      "bg-spot-1": "rgba(51,133,255,.18)",
+      "bg-spot-2": "rgba(122,206,212,.18)",
+      "bg-spot-3": "rgba(208,133,242,.12)",
+      panel: "#FFFFFF",
+      line: "#D7E6F5",
+      line2: "#BDD1E6",
+      text: "#122033",
+      muted: "rgba(18,32,51,.68)",
+      muted2: "rgba(18,32,51,.50)",
+      primary: "#3385FF",
+      "accent-coral": "#EB8983",
+      "accent-teal": "#7ACED4",
+      "accent-purple": "#D085F2",
+      shadow: "0 18px 46px rgba(51,133,255,.12)",
+      "panel-soft": "#F2F8FF",
+      "panel-soft-2": "#E6F0FB",
+      "panel-subtle": "#FAFDFF",
+      "panel-subtle-2": "#EEF6FF",
+      "panel-strong": "rgba(18,32,51,.55)",
+      "panel-strong-2": "rgba(18,32,51,.35)",
+      "panel-strong-3": "rgba(10,18,30,.60)",
+      "text-contrast": "rgba(244,248,255,.92)",
+      "text-contrast-muted": "rgba(244,248,255,.86)",
+      "text-on-primary": "#0d1a2f",
+      "input-bg": "#FFFFFF",
+      "progress-track": "#DFECFA",
+      "progress-bar": "linear-gradient(90deg, rgba(51,133,255,.95), rgba(122,206,212,.92))"
+    }
+  },
+  {
+    id: "glacier-night",
+    label: "Glacier Night (dunkel)",
+    vars: {
+      bg: "#0C1118",
+      "bg-spot-1": "rgba(51,133,255,.20)",
+      "bg-spot-2": "rgba(122,206,212,.14)",
+      "bg-spot-3": "rgba(208,133,242,.14)",
+      panel: "#141B26",
+      line: "#243246",
+      line2: "#32465E",
+      text: "#E3E9F5",
+      muted: "rgba(227,233,245,.68)",
+      muted2: "rgba(227,233,245,.50)",
+      primary: "#66A3FF",
+      "accent-coral": "#F0A7A2",
+      "accent-teal": "#7ACED4",
+      "accent-purple": "#DCA3F5",
+      shadow: "0 18px 46px rgba(0,0,0,.42)",
+      "panel-soft": "#182130",
+      "panel-soft-2": "#1F2A3C",
+      "panel-subtle": "#151D2A",
+      "panel-subtle-2": "#1D2738",
+      "panel-strong": "rgba(6,10,16,.65)",
+      "panel-strong-2": "rgba(6,10,16,.45)",
+      "panel-strong-3": "rgba(4,7,12,.75)",
+      "text-contrast": "#EEF4FF",
+      "text-contrast-muted": "rgba(238,244,255,.86)",
+      "text-on-primary": "#0b1320",
+      "input-bg": "#182130",
+      "progress-track": "#2A3952",
+      "progress-bar": "linear-gradient(90deg, rgba(102,163,255,.95), rgba(122,206,212,.92))"
+    }
+  }
+];
 const concepts = [
   {
     id: "service_sales_2030",
@@ -123,6 +466,7 @@ const resetBtn = document.getElementById("resetBtn");
 
 const summaryTextEl = document.getElementById("summaryText");
 const statusPillEl = document.getElementById("statusPill");
+const themeSelectEl = document.getElementById("themeSelect");
 const galleryGridEl = document.getElementById("galleryGrid");
 const appEl = document.querySelector(".app");
 
@@ -199,6 +543,36 @@ function safeId(){
   return (crypto.randomUUID ? crypto.randomUUID() : String(Date.now() + Math.random()));
 }
 
+function applyTheme(themeId){
+  const theme = THEMES.find(t => t.id === themeId) || THEMES[0];
+  if(!theme) return;
+  const root = document.documentElement;
+
+  Object.entries(theme.vars).forEach(([key, value]) => {
+    root.style.setProperty(`--${key}`, value);
+  });
+
+  if(themeSelectEl) themeSelectEl.value = theme.id;
+  localStorage.setItem(THEME_KEY, theme.id);
+}
+
+function initThemeSelect(){
+  if(!themeSelectEl) return;
+  themeSelectEl.innerHTML = "";
+
+  THEMES.forEach(theme => {
+    const opt = document.createElement("option");
+    opt.value = theme.id;
+    opt.textContent = theme.label;
+    themeSelectEl.appendChild(opt);
+  });
+
+  const saved = localStorage.getItem(THEME_KEY);
+  const initial = THEMES.some(t => t.id === saved) ? saved : THEMES[0]?.id;
+  applyTheme(initial);
+
+  themeSelectEl.addEventListener("change", () => applyTheme(themeSelectEl.value));
+}
 // ----------------------------
 // Prompt
 // ----------------------------
@@ -1408,6 +1782,7 @@ updateProviderUI();
 readProviderFromDom();
 readPollinationsOptionsFromDom();
 readAIHordeOptionsFromDom();
+initThemeSelect();
 initGallerySplitter();
 render();
 
@@ -1497,4 +1872,8 @@ function initGallerySplitter(){
   galleryDividerEl.addEventListener("pointerup", () => { dragging = false; });
   galleryDividerEl.addEventListener("pointercancel", () => { dragging = false; });
 }
+
+
+
+
 
