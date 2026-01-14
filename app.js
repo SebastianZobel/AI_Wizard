@@ -352,29 +352,30 @@ const THEMES = [
     }
   }
 ];
+
 const concepts = [
   {
     id: "service_sales_2030",
     title: "Service & Sales – next level!",
-    desc: "Wie sieht exzellenter Service und Sales im CSS im Jahr 2030 aus? Was ist neu, was fühlt sich leichter an, was läuft schneller oder smarter? Ist Service persönlicher, digitaler, vorausschauender – oder alles zusammen? \n\nErzeuge ein Bild Deiner Wunschvorstellung von Service & Sales in 5 Jahren im CSS.",
+    desc: "Wie sieht exzellenter Service & Sales im CSS in 2030 aus? Was ist neu, was fühlt sich anders an - ist Service persönlicher, digitaler, smarter? \n\n**Erzeuge ein Bild Deiner Wunschvorstellung von Service & Sales in 5 Jahren.**",
     tags: ["Service", "Sales", "Next Level"],
-    image: "./images/sales_and_service_2030.png",
+    image: "./images/Sales_and_Service_2030.png",
     templateHint: "Zukunftsfähiger Service & Sales im CSS: nahtlos, schnell, smart und zugleich menschlich."
   },
   {
     id: "kundeninteraktion_5",
     title: "Das perfekte Kundenerlebnis",
-    desc: "Versetze Dich in unsere Kundinnen und Kunden: Wie erleben sie die Kommunikation (Interaktion) mit uns im Jahr 2030? \n Welche Touchpoints gibt es, welche Emotionen, welche Momente bleiben in Erinnerung? \n\nErzeuge ein Bild davon, wie der Kunde die Interaktion mit dem CSS in 5 Jahren erlebt.",
+    desc: "Wie erleben unsere Kund:innen die Kommunikation mit uns im Jahr 2030? Welche Touchpoints zählen, welche Momente bleiben? \n\n**Erzeuge ein Bild der Interaktion mit unseren Kund:innen in 5 Jahren.**",
     tags: ["Kundenerlebnis", "Touchpoints", "Emotionen"],
-    image: "./images/kundeninteraktion_in_5_jahren.png",
+    image: "./images/Kundeninteraktion_in_5_Jahren.png",
     templateHint: "Perfektes Kundenerlebnis: erinnerungswürdig, mühelos, über viele Touchpoints hinweg und emotional positiv."
   },
   {
     id: "fit_fuer_zukunft",
     title: "Unsere Superpower",
-    desc: "Welche Stärke zeichnet Dein Team heute aus – und macht Euch bereit für morgen? Was befähigt Euch, Veränderungen zu meistern und Zukunft aktiv zu gestalten? \n\nErzeuge ein Bild der **Superpower** Deines Teams, die Euch fit für die Zukunft macht.",
+    desc: "Welche Stärke macht Dein Team heute aus – und bereit für morgen? Was hilft Euch, Veränderung zu meistern & Zukunft aktiv zu gestalten? \n\n**Erzeuge ein Bild der Superpower Deines Teams.**",
     tags: ["Team", "Superpower", "Zukunft"],
-    image: "./images/fit_fuer_die_zukunft.png",
+    image: "./images/Fit_fuer_die_Zukunft.png",
     templateHint: "Zeige die Kernstärke Deines Teams, die Euch zukunftssicher und widerstandsfähig macht."
   }
 ];
